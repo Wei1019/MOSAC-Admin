@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台管理系統登入</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="background-image"></div>
+        <div class="content-wrapper">
+            <div class="login-container">
+                <div class="login-header">
+                    <div class="logo">
+                        <img src="/images/m.png" alt="LOGO">
+                    </div>
+                    <h1>自我健康管理雲端平台<br>後台管理系統</h1>
+                </div>
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">管理者帳號</label>
+                        <input type="text" id="username" name="username" required placeholder="請輸入帳號">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">管理者密碼</label>
+                        <input type="password" id="password" name="password" required placeholder="請輸入密碼">
+                    </div>
+                    <button type="submit" class="login-button">登入</button>
+                </form>
+                <div class="divider"></div>
+                <div class="user-link">
+                    <a href="/">返回前台網頁</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/loginModel.js"></script>
+    <script src="/js/loginController.js"></script>
+</body>
+</html>

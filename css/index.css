@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #87CEEB;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.current-path {
+    font-size: 18px;
+}
+
+.datetime {
+    font-size: 50px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.user-info {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    background-color: #555;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 80px 20px 20px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actions button {
+    margin-left: 10px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.logout {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn-add, .btn-delete, .btn-excel, .btn-search {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add { background-color: #4CAF50; color: white; }
+.btn-delete { background-color: #f44336; color: white; }
+.btn-excel { background-color: #2196F3; color: white; }
+.btn-search { background-color: #555; color: white; }

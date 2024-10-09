@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSAC 後台管理 - 用戶管理</title>
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+          <div class="logo">
+            <img src="/images/m.png" alt="LOGO">
+            <h1>MOSAC後台管理</h1>
+          </div>
+            <div class="breadcrumbList">
+                <img class="breadcrumb_icon" src="/images/home.png" alt="ICON">
+                <ol class="breadcrumb">
+                    <li><a href="/html/user.html">用戶管理</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="header-right">
+            <div id="current-time" class="current-time"></div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> 登出
+            </button>
+        </div>
+      </header>
+    
+    <div class="container">
+        <aside>
+            <div class="admin-info">
+                <img src="/images/user0.png" alt="管理者頭像" class="avatar">
+                    <div class="adminall">
+                        <h3 class="admin-name">Ethan</h3>
+                        <h3 class="admin-welcome">歡迎登入!</h3>
+                    </div>
+            </div>
+            <hr style="width: 90%; color: rgba(168, 164, 158, 0.531);">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">用戶管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">用戶資訊</a></li>
+                            <li><a href="#">用戶資料</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">權限管理</a></li>
+                    <li><a href="#">群組管理</a></li>
+                    <li><a href="#">諮詢管理</a></li>
+                    <li><a href="#">點數管理</a></li>
+                    <li><a href="#">資訊管理</a></li>
+                    <li><a href="#">遊戲管理</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="title-container">
+                <h1>用戶管理</h1>
+                <hr class="line">
+            </div>
+            <div class="button-container">
+                <div class="button-delete">
+                    <button class="delete-user">刪除用戶</button>
+                </div>
+                <div class="button-excel">
+                    <button class="excel">Excel 匯入</button>
+                </div>
+            </div>
+
+                <form class="userSearch">
+                    <input type="search" placeholder="搜尋用戶">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="select-all"></th>
+                            <th>項次</th>
+                            <th>用戶頭像</th>
+                            <th>帳號名稱</th>
+                            <th>用戶姓名</th>
+                            <th>用戶類型</th>
+                            <th>目前階段</th>
+                            <th>建檔日期</th>
+                            <th>編輯</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td><img src="/images/user1.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top001</td>
+                            <td>李ＯＯ</td>
+                            <td>一般用戶</td>
+                            <td>意圖前期</td>
+                            <td>2023-05-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td><img src="/images/user1.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top002</td>
+                            <td>張ＯＯ</td>
+                            <td>一般用戶</td>
+                            <td>意圖前期</td>
+                            <td>2023-05-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>3</td>
+                            <td><img src="/images/user1.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top003</td>
+                            <td>林ＯＯ</td>
+                            <td>一般用戶</td>
+                            <td>意圖前期</td>
+                            <td>2023-05-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>4</td>
+                            <td><img src="/images/user2.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top004</td>
+                            <td>謝ＯＯ</td>
+                            <td>一般用戶</td>
+                            <td>準備期</td>
+                            <td>2023-05-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>5</td>
+                            <td><img src="/images/user3.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top005</td>
+                            <td>黃ＯＯ</td>
+                            <td>一般用戶</td>
+                            <td>意圖期</td>
+                            <td>2023-05-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>6</td>
+                            <td><img src="/images/user4.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top006</td>
+                            <td>張ＯＯ</td>
+                            <td>一般用戶</td>
+                            <td>行動期</td>
+                            <td>2023-05-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>7</td>
+                            <td><img src="/images/user1.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top007</td>
+                            <td>高ＯＯ</td>
+                            <td>一般用戶</td>
+                            <td>維持期</td>
+                            <td>2023-04-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>8</td>
+                            <td><img src="/images/user1.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top008</td>
+                            <td>陳ＯＯ</td>
+                            <td>專家</td>
+                            <td></td>
+                            <td>2023-04-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>9</td>
+                            <td><img src="/images/user0.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top009</td>
+                            <td>李ＯＯ</td>
+                            <td>管理者</td>
+                            <td></td>
+                            <td>2023-03-01</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>10</td>
+                            <td><img src="/images/user0.png" alt="用戶頭像" class="user-avatar"></td>
+                            <td>Top010</td>
+                            <td>Ethan</td>
+                            <td>管理者</td>
+                            <td></td>
+                            <td>2023-05-10</td>
+                            <td>
+                                <button class="edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+                        <!-- 更多用户数据行 -->
+                    </tbody>
+
+                    
+                </table>
+            
+                <div class="table-footer">
+                    <div class="rows-per-page">
+                        每頁列數：
+                        <select id="rows-select">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div class="pagination">
+                        <button class="page-btn" data-page="1">1</button>
+                        <button class="page-btn" data-page="2">2</button>
+                        <button class="page-btn" data-page="3">3</button>
+                        <button class="page-btn" data-page="4">4</button>
+                        <span>...</span>
+                        <button class="page-btn" data-page="20">20</button>
+                        <button class="page-btn next" data-page="next">Next</button>
+                    </div>
+                </div>
+        </main>
+    </div>
+
+    <script src="/js/user.js"></script>
+
+</body>
+</html>
