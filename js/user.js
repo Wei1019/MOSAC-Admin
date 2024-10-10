@@ -121,3 +121,32 @@ function uploadFile(file) {
     // 實際上傳邏輯應該放在這裡
     console.log('開始上傳文件:', file.name);
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sortIcons = document.querySelectorAll('.sort-icon');
+    const rowsPerPageSelect = document.querySelector('.consultation-rows-per-page select');
+    const pageButtons = document.querySelectorAll('.consultation-page-buttons button');
+
+    // 排序功能
+    sortIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            // 这里添加排序逻辑
+            console.log('Sort by:', this.parentNode.textContent.trim());
+        });
+    });
+
+    // 每页显示数量变化
+    rowsPerPageSelect.addEventListener('change', function() {
+        console.log('Rows per page:', this.value);
+        // 这里添加更新表格的逻辑
+    });
+
+    // 页码切换
+    pageButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('Go to page:', this.textContent);
+            // 这里添加页面切换逻辑
+        });
+    });
+});

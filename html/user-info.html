@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOSAC 後台管理 - 帳號管理</title>
+    <title>MOSAC 後台管理 - 使用者資料</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/user-manager.css">
+    <link rel="stylesheet" href="/css/user.expert.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -100,10 +101,10 @@
                 <hr class="line">
             </div>
 
-            <div class="title-name"><h2>專家資料</h2></div>
+            <div class="title-name"><h2>使用者資料</h2></div>
             <div class="manager-profile-card">
                 <div class="profile-left">
-                    <img src="/images/doctor1.png" alt="管理者頭像" class="avatar">
+                    <img src="/images/user2.png" alt="使用者頭像" class="avatar">
                     <div class="manager-info">
                         <div class="input-group">
                             <label for="account-name">帳號名稱：</label>
@@ -125,71 +126,92 @@
                     </div>
                 </div>
             </div>
+            <div class="title-name"><h2>點數紀錄</h2></div>
+            <div class="consultation-container">
+                <table class="consultation-table">
+                    <thead>
+                        <tr>
+                            <th>項次</th>
+                            <th>會議標題 <span class="sort-icon">▼</span></th>
+                            <th>會議類別 <span class="sort-icon">▼</span></th>
+                            <th>建立日期 <span class="sort-icon">▼</span></th>
+                            <th>編輯項目</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>下午兩點個人諮詢</td>
+                            <td>個人諮詢</td>
+                            <td>2024年9月15日</td>
+                            <td>
+                                <button class="consultation-edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
 
-            <div class="title-name"><h2>諮詢資訊</h2></div>
-            <table class="user-table">
-                <thead>
-                    <tr>
-                        <th>項次</th>
-                        <th>會議標題</th>
-                        <th>會議類別</th>
-                        <th>建立日期</th>
-                        <th>編輯項目</th>
-                    </tr>
-                </thead>
+                        <tr>
+                            <td>2</td>
+                            <td>下午兩點個人諮詢</td>
+                            <td>個人諮詢</td>
+                            <td>2024年9月15日</td>
+                            <td>
+                                <button class="consultation-edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
 
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>下午兩點個人諮詢</td>
-                        <td>個人諮詢</td>
-                        <td>2024年9月15日</td>
-                        <td>
-                            <button class="edit-btn">檢視修改</button>
-                        </td>
-                    </tr>
 
-                    <tr>
-                        <td>2</td>
-                        <td>下午兩點個人諮詢</td>
-                        <td>個人諮詢</td>
-                        <td>2024年9月15日</td>
-                        <td>
-                            <button class="edit-btn">檢視修改</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>下午兩點個人諮詢</td>
+                            <td>個人諮詢</td>
+                            <td>2024年9月15日</td>
+                            <td>
+                                <button class="consultation-edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>3</td>
-                        <td>下午兩點個人諮詢</td>
-                        <td>個人諮詢</td>
-                        <td>2024年9月15日</td>
-                        <td>
-                            <button class="edit-btn">檢視修改</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>下午兩點個人諮詢</td>
+                            <td>個人諮詢</td>
+                            <td>2024年9月15日</td>
+                            <td>
+                                <button class="consultation-edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>4</td>
-                        <td>下午兩點個人諮詢</td>
-                        <td>個人諮詢</td>
-                        <td>2024年9月15日</td>
-                        <td>
-                            <button class="edit-btn">檢視修改</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>下午兩點個人諮詢</td>
+                            <td>個人諮詢</td>
+                            <td>2024年9月15日</td>
+                            <td>
+                                <button class="consultation-edit-btn">檢視修改</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="consultation-pagination">
+                    <div class="consultation-rows-per-page">
+                        每頁列數：
+                        <select>
+                            <option>5</option>
+                            <option>10</option>
+                            <option>20</option>
+                        </select>
+                    </div>
+                    <div class="consultation-page-buttons">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <span>...</span>
+                        <button>20</button>
+                        <button>Next</button>
+                    </div>
+                </div>
+            </div>
 
-                    <tr>
-                        <td>5</td>
-                        <td>下午兩點個人諮詢</td>
-                        <td>個人諮詢</td>
-                        <td>2024年9月15日</td>
-                        <td>
-                            <button class="edit-btn">檢視修改</button>
-                        </td>
-                    </tr>
-
-                </tbody>
         </main>
     </div>
 
