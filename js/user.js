@@ -75,3 +75,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const excelImportBtn = document.getElementById('excelImportBtn');
+    const fileInput = document.getElementById('fileInput');
+
+    excelImportBtn.addEventListener('click', function() {
+        fileInput.click(); // 觸發文件選擇對話框
+    });
+
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            console.log('選擇的文件:', file.name);
+            // 這裡可以添加處理文件的邏輯，例如上傳到服務器
+            uploadFile(file);
+        }
+    });
+});
+
+function uploadFile(file) {
+    // 這裡添加上傳文件到服務器的代碼
+    // 例如使用 Fetch API 或 XMLHttpRequest
+    console.log('開始上傳文件:', file.name);
+    // 實際的上傳邏輯
+}
+
+
+function uploadFile(file) {
+    const uploadStatus = document.getElementById('uploadStatus');
+    uploadStatus.style.display = 'inline';
+    uploadStatus.textContent = '上傳中...';
+
+    // 模擬上傳過程
+    setTimeout(() => {
+        uploadStatus.textContent = '上傳完成！';
+        setTimeout(() => {
+            uploadStatus.style.display = 'none';
+        }, 2000);
+    }, 2000);
+
+    // 實際上傳邏輯應該放在這裡
+    console.log('開始上傳文件:', file.name);
+}

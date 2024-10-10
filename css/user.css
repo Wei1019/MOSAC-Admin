@@ -201,11 +201,13 @@ hr.line{
     margin: 20px 0; /* 上下边距 */
 }
 
-.button-delete, .button-excel {
+
+
+.button-new,.button-delete, .button-excel {
     display: flex;
 }
 
-.delete-user, .excel {
+.new-user,.delete-user, .excel {
     font-size: 1em;
     padding: 10px 20px;
     border: none;
@@ -214,8 +216,17 @@ hr.line{
     transition: background-color 0.3s ease;
 }
 
+.new-user{
+    background-color: #f5ac1a;
+    color:white;
+}
+
+.new-user:hover{
+    background-color: #ec9e30;
+    color:white;
+}
 .delete-user {
-    background-color: #d61d1d; /* 红色背景 */
+    background-color: #d61d1d; 
     color: white;
 }
 
@@ -240,8 +251,8 @@ hr.line{
 .userSearch {
     
     display: flex;
-    max-width: 50em;
-    margin-top: 1em;
+    max-width: 40em;
+    margin-top: -3.5em;
 }
 
 .userSearch input[type="search"] {
@@ -314,6 +325,11 @@ hr.line{
 .edit-btn {
     background-color: #4CAF50;
     color: white;
+    font-size: 0.8em;
+}
+
+.edit-btn:hover{
+    background-color: #f07a0b;
 }
 
 

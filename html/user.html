@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOSAC 後台管理 - 用戶管理</title>
+    <title>MOSAC 後台管理 - 帳號管理</title>
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
             <div class="breadcrumbList">
                 <img class="breadcrumb_icon" src="/images/home.png" alt="ICON">
                 <ol class="breadcrumb">
-                    <li><a href="/html/user.html">用戶管理</a></li>
+                    <li><a href="/html/user.html">帳號管理</a></li>
                 </ol>
             </div>
         </div>
@@ -42,33 +42,72 @@
             <nav>
                 <ul>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">用戶管理 <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="dropdown-toggle">帳號管理 <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">用戶資訊</a></li>
-                            <li><a href="#">用戶資料</a></li>
+                            <li><a href="#">使用者資料</a></li>
+                            <li><a href="#">專家資料</a></li>
+                            <li><a href="#">管理者資料</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">權限管理</a></li>
-                    <li><a href="#">群組管理</a></li>
-                    <li><a href="#">諮詢管理</a></li>
-                    <li><a href="#">點數管理</a></li>
-                    <li><a href="#">資訊管理</a></li>
-                    <li><a href="#">遊戲管理</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">權限管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">新增權限</a></li>
+                            <li><a href="#">編輯權限</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">群組管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">群組資訊</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">諮詢管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">新增諮詢</a></li>
+                            <li><a href="#">編輯諮詢</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">資訊管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">新增資訊</a></li>
+                            <li><a href="#">編輯資訊</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">點數管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">點數發放設定</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">遊戲管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">遊戲題目設定</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </aside>
 
         <main>
             <div class="title-container">
-                <h1>用戶管理</h1>
+                <h1>帳號管理</h1>
                 <hr class="line">
             </div>
             <div class="button-container">
+                <div class="button-new">
+                    <button class="new-user">新增帳號</button>
+                </div>
                 <div class="button-delete">
-                    <button class="delete-user">刪除用戶</button>
+                    <button class="delete-user">刪除帳號</button>
                 </div>
                 <div class="button-excel">
-                    <button class="excel">Excel 匯入</button>
+                    <button id="excelImportBtn" class="excel">Excel 匯入</button>
+                    <input type="file" id="fileInput" style="display: none;" accept=".xlsx, .xls">
+                    <span id="uploadStatus" style="display: none;">上傳中...</span>
                 </div>
             </div>
 
@@ -82,10 +121,10 @@
                         <tr>
                             <th><input type="checkbox" id="select-all"></th>
                             <th>項次</th>
-                            <th>用戶頭像</th>
+                            <th>帳號頭像</th>
                             <th>帳號名稱</th>
-                            <th>用戶姓名</th>
-                            <th>用戶類型</th>
+                            <th>帳號姓名</th>
+                            <th>帳號類型</th>
                             <th>目前階段</th>
                             <th>建檔日期</th>
                             <th>編輯</th>
