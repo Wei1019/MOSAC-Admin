@@ -1,14 +1,393 @@
-/* 重置和通用樣式 */
-body, html {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-/* 可能共用的按鈕樣式 */
-.btn {
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 確保內容靠左對齊 */
+}
+
+.logo img {
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem; /* 默認間距 */
+}
+
+.breadcrumbList {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 將麵包屑推到右側 */
+}
+
+.breadcrumb_icon {
+    height: 1.5rem;
+    margin-right: 0.5rem; /* 調整圖標和文字之間的間距 */
+}
+
+.breadcrumb {
+    list-style-type: none; /* 移除默認的列表樣式（包括序號） */
+    padding: 0;
+    margin: 0;
+    display: flex; /* 使用 flexbox 來水平排列項目 */
+    align-items: center;
+}
+
+.breadcrumb li {
+    display: flex; /* 改為 flex 以更好地控制內容 */
+    align-items: center;
+}
+
+.breadcrumb li a {
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 0.9rem; 
+    padding: 0.25rem 0.5rem; /* 增加內邊距 */
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline; /* 懸停時添加下劃線 */
+}
+
+/* 添加麵包屑項目之間的分隔符 */
+.breadcrumb li + li::before {
+    content: ">";
+    color: #666;
+    margin: 0 0.5rem; /* 使用 margin 替代 padding */
+    font-size: 0.9rem; /* 與文字大小一致 */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+
+}
+
+.current-time {
+    font-size:1.2rem;
+    margin-right: 1.5em;
+    font-weight: bold;
+    white-space: nowrap; /* 防止時間換行 */
+}
+
+.logout-btn {
+    background-color: #f7b51a;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4em;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #f07a0b;
+}
+
+.logout-btn:active {
+    transform: translateY(1px); /* 點擊時輕微下沉效果 */
+}
+
+.logout-btn i { /*icon與文字間距*/
+    margin-right: 0.3em;
+}
+
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 13em;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.adminall {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-name {
+    margin: 0 0 0.5rem 0; /* 上右下左 */
+}
+
+.avatar1 {
+    height: 4.5rem;
+    margin-left: 1em;
+    margin-right: 2rem;
+}
+
+.admin-welcome {
+    margin: 0;
+}
+
+nav{
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown{
+    font-size: 0.8em;
+}
+
+.dropdown-menu {
+    display: none;
+    padding-left: 20px; 
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+main {
+    flex: 1;
+    padding: 0.1em 2em;
+}
+
+.title-container h1{
+    text-decoration: underline;
+    text-underline-offset: 1em;
+    text-decoration-thickness: 0.2em;
+}
+hr.line{
+    border:solid rgba(165, 156, 156, 0.864);
+    width: 40%;
+    margin-left: -0.04em;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* 按钮之间的间距 */
+    margin: 20px 0; /* 上下边距 */
+}
+
+
+
+.button-new,.button-delete, .button-excel {
+    display: flex;
+}
+
+.new-user,.delete-user, .excel {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-user{
+    background-color: #f5ac1a;
+    color:white;
+}
+
+.new-user:hover{
+    background-color: #ec9e30;
+    color:white;
+}
+.delete-user {
+    background-color: #d61d1d; 
+    color: white;
+}
+
+.delete-user:hover {
+    background-color: #ff3333;
+}
+
+.excel {
+    background-color: rgb(33, 135, 47);
+    color: white;
+}
+
+.excel:hover {
+    background-color: rgb(22, 180, 43);
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.userSearch {
+    
+    display: flex;
+    max-width: 40em;
+    margin-top: -3.5em;
+}
+
+.userSearch input[type="search"] {
+    flex-grow: 1;
+    min-width: 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.userSearch button {
+    padding: 10px 15px;
+    background-color: #f07a0b;
+    color: white;
+    border: 1px solid #f07a0b;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.userSearch button:hover {
+    background-color: #f07a0b;
+}
+
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 0.8em;
+}
+
+.edit-btn:hover{
+    background-color: #f07a0b;
+}
+
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-top: none;
+    margin-bottom: 2em; /* 底部間距 */
+}
+
+.rows-per-page {
+    display: flex;
+    align-items: center;
+}
+
+.rows-per-page select {
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+}
+
+.page-btn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.page-btn.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.page-btn.next {
+    background-color: #f2f2f2;
+}
+
+
+

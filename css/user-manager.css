@@ -1,0 +1,109 @@
+.manager-profile-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e8e7e7d9;
+    border-radius: 1em;
+    padding:2em ;
+    margin-top: -1em;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 6em;
+    height: 6em;
+    margin-right: 1em;
+}
+
+.manager-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 1em;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 25em;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 0.4em;
+    font-size: 0.8em;
+}
+
+.profile-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.button-group {
+    margin-bottom: 1em;
+}
+
+.btn {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reset {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.btn-save {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.creation-date {
+    font-size: 1em;
+    color: #666;
+}
+
+
+.group-info-card {
+    background-color: #e8e7e7d9;
+    border-radius: 1em;
+    padding:2em ;
+    margin-top: -1em;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.permission-tag {
+    background-color: #f0f0f0;
+    border: 0.1em solid #070707;
+    border-radius: 4px;
+    padding: 0.25em 0.5em;
+    font-size: 1em;
+    color: #333;
+}

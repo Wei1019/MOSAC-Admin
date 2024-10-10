@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSAC 後台管理 - 帳號管理</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/user-manager.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+          <div class="logo">
+            <img src="/images/m.png" alt="LOGO">
+            <h1>MOSAC後台管理</h1>
+          </div>
+            <div class="breadcrumbList">
+                <img class="breadcrumb_icon" src="/images/home.png" alt="ICON">
+                <ol class="breadcrumb">
+                    <li><a href="/html/user.html">帳號管理</a></li>
+                    <li><a href="/html/user-manager.html">帳號資訊</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="header-right">
+            <div id="current-time" class="current-time"></div>
+            <button class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> 登出
+            </button>
+        </div>
+      </header>
+    
+    <div class="container">
+        <aside>
+            <div class="admin-info">
+                <img src="/images/user0.png" alt="管理者頭像" class="avatar1">
+                    <div class="adminall">
+                        <h3 class="admin-name">Ethan</h3>
+                        <h3 class="admin-welcome">歡迎登入!</h3>
+                    </div>
+            </div>
+            <hr style="width: 90%; color: rgba(168, 164, 158, 0.531);">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">帳號管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">使用者資料</a></li>
+                            <li><a href="#">專家資料</a></li>
+                            <li><a href="#">管理者資料</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">權限管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">新增權限</a></li>
+                            <li><a href="#">編輯權限</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">群組管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">群組資訊</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">諮詢管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">新增諮詢</a></li>
+                            <li><a href="#">編輯諮詢</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">資訊管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">新增資訊</a></li>
+                            <li><a href="#">編輯資訊</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">點數管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">點數發放設定</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">遊戲管理 <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">遊戲題目設定</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="title-container">
+                <h1>帳號資訊</h1>
+                <hr class="line">
+            </div>
+
+            <div class="title-name"><h2>管理者資料</h2></div>
+            <div class="manager-profile-card">
+                <div class="profile-left">
+                    <img src="/images/user4.png" alt="管理者頭像" class="avatar">
+                    <div class="manager-info">
+                        <div class="input-group">
+                            <label for="account-name">帳號名稱：</label>
+                            <input type="text" id="account-name" value="Top001">
+                        </div>
+                        <div class="input-group">
+                            <label for="account-fullname">帳號姓名：</label>
+                            <input type="text" id="account-fullname" value="李OO">
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <div class="button-group">
+                        <button class="btn btn-reset">初始化密碼</button>
+                        <button class="btn btn-save">儲存</button>
+                    </div>
+                    <div class="creation-date">
+                        建檔日期：2024年09月18日
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-name"><h2>權限群組</h2></div>
+            <div class="group-info-card">
+                <div class="info-row">
+                    <div class="info-label">群組名稱：</div>
+                    <div class="info-content">權限組群1</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">群組權限：</div>
+                    <div class="info-content">
+                        <span class="permission-tag">帳號管理</span>
+                        <span class="permission-tag">權限管理</span>
+                        <span class="permission-tag">群組管理</span>
+                        <span class="permission-tag">諮詢管理</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/user.js"></script>
+    <script src="/js/user-manager.js"></script>
+
+</body>
+</html>
